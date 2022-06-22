@@ -1,10 +1,10 @@
 import Spinner from "./Spinner";
 import { useQuery } from "@apollo/client";
-import { GET_Projects } from "../queries/projectQueries";
+import { GET_PROJECTS } from "../queries/projectQueries";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
-  const { loading, error, data } = useQuery(GET_Projects)
+  const { loading, error, data } = useQuery(GET_PROJECTS)
 
   if (loading) return <Spinner />
   if (error) return <p>Something went wrong </p>;
